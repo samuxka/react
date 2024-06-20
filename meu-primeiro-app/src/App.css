@@ -1,0 +1,77 @@
+:root{
+  --main-color: #039aff;
+  --bg-color: #ffedd7;
+  --second-bg-color: #fff;
+  --main-black-color: #242424;
+
+  --transition-1: 0.5s ease;
+
+  --border: 1px solid transparent;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-color);
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 3%;
+  background: var(--main-black-color);
+}
+
+header .logo h1{
+  color: var(--main-color);
+  animation: bglogo infinite 5s;
+}
+
+header .navlist nav ul{
+  display: inline-flex;
+  gap: 20px;
+}
+
+header .navlist nav ul li a{
+  color: var(--second-bg-color);
+  font-weight: 600;
+  transition: var(--transition-1);
+}
+
+header .navlist nav ul li a:hover{
+  color: var(--main-color);
+  transition: var(--transition-1);
+}
+
+header .navlist nav ul li .login-btn{
+  margin: 0 10px;
+  padding: 10px 25px;
+  border: var(--border);
+  background: var(--main-color);
+  transition: var(--transition-1);
+}
+
+header .navlist nav ul li .login-btn:hover{
+  background: none;
+  border: 1px solid var(--main-color);
+}
+
+@keyframes bglogo {
+  0%{
+    filter: drop-shadow(0px 0px 0px var(--main-color));
+  }
+  50%{
+    filter: drop-shadow(0px 0px 10px var(--main-color));
+  }
+  100%{
+    filter: drop-shadow(0px 0px 0px var(--main-color));
+  }
+}
